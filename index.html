@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+    <script>
+      $(document).ready(function(){
+        $('.slider').bxSlider();
+      });
+    </script>
+    <title>Locastic - responsive HTML/CSS predlozak</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/Locastic_logo.png" alt="Locastic">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+            <div class="nav-submenu" id="myTopnav">
+            <button class="nav-dropbtn"><a href="#">Works</a></button>
+                <ul class="nav-content">
+                    <li><a href="#">Manistra na pome</a></li>
+                    <li><a href="#">Biftek - Medium rare+</a></li>
+                    <li><a href="#">Picigin 2016</a></li>
+                    <li><a href="#">Jos jedan link eto tako</a></li>
+                </ul>
+            </div>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="burger">
+            <div class="line_one"></div>
+            <div class="line_two"></div>
+            <div class="line_three"></div>
+    </div>
+</nav>
+
+<!-- Start Slick Slider -->
+<div class="slider">
+        <div class="slider-element"><img src="img/slider-image-1024x250.png" alt="First slide" id="wows1_0"/></div>
+        <div class="slider-element"><img src="img/mountains-original.jpg" alt="Second slide" id="wows1_0"/></div>
+        <div class="slider-element"><img src="img/mountains-original.jpg" alt="Third slide" id="wows1_0"/></div>
+</div>
+<!-- End Slick Slider -->
+
+<div class="main-wrapper__card">
+  <div class="card">
+          <img src="img/content-image.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Roboto 40px Size, Spacing 44px - Comment On The Importance Of Human Life</h5>
+            <p class="card-text">Roboto Regular, 22px, Spacing 34px - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <a href="#" class="card-btn">View full article</a>
+          </div>
+  </div>
+  <div class="card">
+          <img src="img/content-image.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Roboto 40px Size, Spacing 44px - Comment On The Importance Of Human Life</h5>
+            <p class="card-text">Roboto Regular, 22px, Spacing 34px - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <a href="#" class="card-btn">View full article</a>
+          </div>
+  </div>
+  <div class="card">
+          <img src="img/content-image.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Roboto 40px Size, Spacing 44px - Comment On The Importance Of Human Life</h5>
+            <p class="card-text">Roboto Regular, 22px, Spacing 34px - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <a href="#" class="card-btn">View full article</a>
+          </div>
+  </div>
+</div>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
