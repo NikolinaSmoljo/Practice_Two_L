@@ -2,7 +2,7 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
- 
+
     burger.addEventListener('click', () => {
 
         //toggle nav
@@ -18,8 +18,8 @@ const navSlide = () => {
                 }
             });*/
 
-            //Burger animation
-            burger.classList.toggle('toggle');
+        //Burger animation
+        burger.classList.toggle('toggle');
     });
 }
 
@@ -28,8 +28,8 @@ navSlide();
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "nav-submenu") {
-      x.className += " responsive";
+        x.className += " responsive";
     } else {
-      x.className = "nav-submenu";
+        x.className = "nav-submenu";
     }
-  }
+}
