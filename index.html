@@ -6,23 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="dist/css/styles.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            $('.slider').bxSlider();
-          });
-    </script>
     <title>Locastic - responsive HTML/CSS predlozak</title>
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
+<header class="site-header">
+    <nav class="main-nav">
+        <div class="main-nav__logo">
             <img src="img/Locastic_logo.png" alt="Locastic">
         </div>
         <ul class="nav-links">
@@ -45,6 +38,7 @@
             <div class="line_three"></div>
         </div>
     </nav>
+</header>
 
     <!-- Start Slick Slider -->
     <div class="slider">
@@ -134,7 +128,9 @@
             </form>
         </div>
     </div>
+</body>
 
+<footer>
     <div class="footer">
         <div class="footer-left">
             <p>2016 Locastic Test Page</p>
@@ -144,7 +140,16 @@
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/nav.js"></script>
-</body>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider();
+          });
+        </script>
+</footer>
+
+
 
 </html>
