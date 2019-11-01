@@ -31,7 +31,7 @@
     .slider-title {
         position: absolute;
         color: white;
-        font-size:50px;
+        font-size:35px;
         letter-spacing:0px;
         line-height:36px;
         top: 50%;
@@ -43,13 +43,14 @@
 
 /*Cards*/
 .main-wrapper__card {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
 }
 .card {
     display: flex;
+    width: 33%;
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 30px;
@@ -58,29 +59,30 @@
         height: 236px;
         margin-bottom: 10px;
     }
+    .card-title {
+        font-size: 40px;
+        letter-spacing: 0px;
+        line-height: 44px;
+        padding-bottom: 11px;
+        color: $dark-gray;
+    }
+    .card-text {
+        font-size: 22px;
+        color: $midium-gray;
+        letter-spacing: 0px;
+        line-height: 34px;
+        padding-bottom: 8px;
+    }
+    .card-btn {
+        font-size: 22px;
+        font-weight: 700;
+        color: $main-color;
+        letter-spacing: 0px;
+        line-height: 34px;
+        text-decoration: none;
+    }
 }
-.card-title {
-    font-size: 40px;
-    letter-spacing: 0px;
-    line-height: 44px;
-    padding-bottom: 11px;
-    color: $dark-gray;
-}
-.card-text {
-    font-size: 22px;
-    color: $midium-gray;
-    letter-spacing: 0px;
-    line-height: 34px;
-    padding-bottom: 8px;
-}
-.card-btn {
-    font-size: 22px;
-    font-weight: 700;
-    color: $main-color;
-    letter-spacing: 0px;
-    line-height: 34px;
-    text-decoration: none;
-}
+
 /*End cards*/
 
 /*Button*/
@@ -104,7 +106,6 @@
         cursor: pointer;
     }
 }
-
 
 /*Contact form*/
 .contactform-wrapper {
@@ -187,62 +188,38 @@ input[type=submit] {
     }
     }
 
-/*Media rule tablet*/
-@media screen and (max-width: 768px) {
-    .button {
-        background-color: $dark-gray;
-    }
-    .slider-title {
-        font-size: 35px;
-    }
-    /*Cards*/
-    .main-wrapper__card.second-wrapper {
-        display: none;
-    }
-    .main-wrapper__card {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-    .card {
-        flex: 0 50%;
-        padding: 20px;
-    }
-    .card-text a.card-btn {
-        text-decoration: underline;
-    }
-    .card-title {
-        font-size:36px;
-        line-height:44px;
-    }
-    /*End Cards*/
-}
-
 /*Media rule mobile*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
 /*slider*/
 .bx-wrapper {
     height: 280px;
-    .slider-element img {
-        height: 280px;
+    .slider-element {
+        img {
+            height: 280px;
+        }
+        .slider-title {
+            font-size: 35px;
+            width: 200px;
+        }
     }
 }
-/*cards*/
+    
+/*Cards*/
 .main-wrapper__card {
     display: flex;
     flex-direction: column;
-.card {
-    width: 100%;
-    .card-title {
-        font-size:32px;
-        line-height:40px;
-    }
-    }
+    .card {
+        width: 100%;
+        .card-title {
+            font-size:32px;
+            line-height:40px;
+        }
+        }
 }
-.main-wrapper__card.second-wrapper {
-    display: none;
-}
-/*end card mobile*/
+
+/*End cards*/
+
+/*End card mobile*/
 
 .contactform-wrapper .main-container {
     width: 90%;
@@ -256,4 +233,36 @@ input[type=submit] {
     }
     }
 }
-/*end media rule mobile*/
+/*End media rule mobile*/
+
+
+/*Media rule tablet*/
+@media screen and (max-width: 768px) {
+    /*Cards*/
+    .card {
+        flex: 0 50%;
+        padding: 20px;
+    }
+    .card:nth-child(5){
+        display: none;
+    }
+    .card:nth-child(6){
+        display: none;
+    }
+    .card-text a.card-btn {
+        text-decoration: underline;
+    }
+    .card-title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    /*End cards*/
+    .button {
+        background-color: $dark-gray;
+    }
+    .slider-title {
+        font-size: 35px;
+    }
+}
+/*End media rule tablet*/
+
