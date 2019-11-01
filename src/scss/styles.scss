@@ -46,14 +46,15 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     height: 100%;
 }
 .card {
     display: flex;
-    width: 33%;
+    width: 25vw;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 30px;
+    padding: 15px;
     .card-img-top {
         width: 322px;
         height: 236px;
@@ -80,6 +81,9 @@
         letter-spacing: 0px;
         line-height: 34px;
         text-decoration: none;
+    }
+    .card-body {
+        padding-right: 20px;
     }
 }
 
@@ -210,15 +214,15 @@ input[type=submit] {
     flex-direction: column;
     .card {
         width: 100%;
-        .card-title {
-            font-size:32px;
-            line-height:40px;
-        }
+            .card-title {
+                font-size:32px;
+                line-height:40px;
+            }
         }
 }
-
-/*End cards*/
-
+.card:nth-child(4){
+    display: none;
+}
 /*End card mobile*/
 
 .contactform-wrapper .main-container {
@@ -235,7 +239,6 @@ input[type=submit] {
 }
 /*End media rule mobile*/
 
-
 /*Media rule tablet*/
 @media screen and (max-width: 768px) {
     /*Cards*/
@@ -243,12 +246,10 @@ input[type=submit] {
         flex: 0 50%;
         padding: 20px;
     }
-    .card:nth-child(5){
+    .card:nth-last-child(-n+2) {
         display: none;
-    }
-    .card:nth-child(6){
-        display: none;
-    }
+      } 
+
     .card-text a.card-btn {
         text-decoration: underline;
     }

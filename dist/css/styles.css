@@ -66,11 +66,12 @@ nav {
     margin: 5px;
     transition: all 0.4 ease; }
 
-/*Media rules*/
+/*Media rule desktop*/
 @media screen and (max-width: 1024px) {
   .nav-links {
     width: 60%; } }
 
+/*End media rule desktop*/
 /*Media rule tablet*/
 @media screen and (max-width: 768px) {
   body {
@@ -84,7 +85,6 @@ nav {
     top: 8vh;
     background-color: #333333;
     display: flex;
-    width: 50%;
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
@@ -97,14 +97,16 @@ nav {
     font-size: 30px; }
   .nav-submenu:hover .nav-dropbtn {
     background-color: #333333; }
-  .nav-content li:hover {
-    background-color: #333333; }
-  .nav-content li a:hover {
-    color: #008ab3; }
-    .nav-content li a:hover a {
-      width: 184px;
-      font-size: 18px;
-      text-align: center; }
+  .nav-submenu .nav-content {
+    position: fixed;
+    width: 32vw; }
+    .nav-submenu .nav-content li {
+      float: left; }
+    .nav-submenu .nav-content li:hover {
+      background-color: #333333; }
+    .nav-submenu .nav-content a:hover {
+      color: #008ab3;
+      background-color: #333333; }
   /*end dropdown tablet*/
   .burger {
     display: block; }
@@ -112,6 +114,7 @@ nav {
     display: inherit; } }
 
 /*End media rule tablet*/
+/*Media rule mobile*/
 @media screen and (max-width: 640px) {
   nav .nav-links {
     width: 100%;
@@ -121,13 +124,13 @@ nav {
       line-height: 32px;
       display: block;
       width: 250px; }
-  .nav-content {
-    position: relative; }
   .nav-submenu .nav-dropbtn {
     background-color: #333333;
     width: 100%; }
   .nav-submenu .nav-content {
-    width: 80vw; }
+    width: 90%; }
+    .nav-submenu .nav-content li:hover {
+      background-color: #333333; }
   /*End mobile dropdown*/ }
 
 @keyframes navLinkFade {
@@ -188,14 +191,15 @@ nav {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   height: 100%; }
 
 .card {
   display: flex;
-  width: 33%;
+  width: 25vw;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 30px; }
+  padding: 15px; }
   .card .card-img-top {
     width: 322px;
     height: 236px;
@@ -219,6 +223,8 @@ nav {
     letter-spacing: 0px;
     line-height: 34px;
     text-decoration: none; }
+  .card .card-body {
+    padding-right: 20px; }
 
 /*End cards*/
 /*Button*/
@@ -335,7 +341,8 @@ input[type=submit] {
       .main-wrapper__card .card .card-title {
         font-size: 32px;
         line-height: 40px; }
-  /*End cards*/
+  .card:nth-child(4) {
+    display: none; }
   /*End card mobile*/
   .contactform-wrapper .main-container {
     width: 90%; }
@@ -353,9 +360,7 @@ input[type=submit] {
   .card {
     flex: 0 50%;
     padding: 20px; }
-  .card:nth-child(5) {
-    display: none; }
-  .card:nth-child(6) {
+  .card:nth-last-child(-n+2) {
     display: none; }
   .card-text a.card-btn {
     text-decoration: underline; }

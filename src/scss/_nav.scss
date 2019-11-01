@@ -79,13 +79,14 @@ nav {
     }
 }
 
-
-/*Media rules*/
+/*Media rule desktop*/
 @media screen and (max-width: 1024px) {
     .nav-links {
         width: 60%;
     }
 }
+/*End media rule desktop*/
+
 /*Media rule tablet*/
 @media screen and (max-width: 768px) {
     body {
@@ -100,7 +101,6 @@ nav {
        top: 8vh;
        background-color: $second-color;
        display: flex;
-       width: 50%;
        flex-direction: column;
        align-items: center;
        transform: translateX(100%);
@@ -117,17 +117,18 @@ nav {
     .nav-submenu:hover .nav-dropbtn {
         background-color: $second-color;
     }
-    .nav-content {
+    .nav-submenu .nav-content {
+        position: fixed;
+        width: 32vw;
+        li {
+            float: left;
+        }
         li:hover {
             background-color: $second-color;
-        }
-        li a:hover {
+        }  
+        a:hover {
             color: $hover-color;
-         a {
-            width: 184px;
-            font-size: 18px;
-            text-align: center;
-            }
+            background-color: $second-color;
         }
     }
     /*end dropdown tablet*/
@@ -140,7 +141,7 @@ nav {
 }
 /*End media rule tablet*/
 
-
+/*Media rule mobile*/
 @media screen and (max-width: 640px) {
     nav .nav-links {
         width: 100%;
@@ -152,20 +153,22 @@ nav {
             width: 250px;
         }
     }
-    .nav-content {
-        position: relative;
-    }
     .nav-submenu {
         .nav-dropbtn {
             background-color: $second-color;
             width: 100%;
         }
         .nav-content {
-            width: 80vw;
+            width: 90%;
+            li:hover {
+                background-color: $second-color;
+            }       
         }
     }
+    
 /*End mobile dropdown*/
 }
+
 
 @keyframes navLinkFade {
     from {
