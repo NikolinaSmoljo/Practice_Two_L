@@ -164,6 +164,9 @@ input[type=submit] {
     border: none;
     cursor: pointer;
   }
+  #mail-message {
+    height: 200px;
+  }
 /*End contact form*/
 
 .footer {
@@ -267,3 +270,13 @@ input[type=submit] {
 }
 /*End media rule tablet*/
 
+/*Form validation style*/
+.form-error {
+    color: red;
+}
+.form-success {
+    color: green;
+}
+.input-error {
+    color: indianred;
+}

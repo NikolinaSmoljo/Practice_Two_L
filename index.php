@@ -7,9 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/styles.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <title>Locastic - responsive HTML/CSS predlozak</title>
+
+    <script>
+        $(document).ready(function() {
+          $("form").submit(function(event) {
+            event.preventDefault();
+            var name = $("#mail-name").val();
+            var email = $("#mail-email").val();
+            var message = $("#mail-message").val();
+
+            $(".form-message").load("mail.php", {
+                name: name,
+                email: email,
+                message: message
+            });
+          });  
+        });
+    </script>
+    <title>Responsive HTML/CSS predlozak</title>
 </head>
 
 <body>
@@ -113,17 +129,18 @@
     <div class="contactform-wrapper">
         <h3 class="contactform-title">Contact Form</h3>
         <div class="main-container">
-            <form>
+            <form action="mail.php" method="POST">
                 <label class="form-title" for="fname">Contact Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Doktor Slicer">
+                <input id="mail-name" type="text" id="fname" name="firstname" placeholder="Doktor Slicer">
 
                 <label class="form-title" for="lname">Email address</label>
-                <input type="text" id="email" name="email" placeholder="frontend@locastic.com">
+                <input id="mail-email" type="text" id="email" name="email" placeholder="frontend@locastic.com">
 
-                <label class="form-title" for="subject">Message</label>
-                <textarea id="subject" name="subject" style="height:200px"></textarea>
+                <label class="form-title" for="message">Message</label>
+                <textarea id="mail-message" name="message"></textarea>
 
                 <input type="submit" value="Send Message">
+                <p class="form-message"></p>
             </form>
         </div>
     </div>

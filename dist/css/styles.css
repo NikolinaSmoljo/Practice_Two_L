@@ -300,6 +300,9 @@ input[type=submit] {
   border: none;
   cursor: pointer; }
 
+#mail-message {
+  height: 200px; }
+
 /*End contact form*/
 .footer {
   height: 70px;
@@ -374,3 +377,9 @@ input[type=submit] {
     font-size: 35px; } }
 
 /*End media rule tablet*/
+/*Form validation style*/
+.form-error {
+  color: red; }
+
+.form-success {
+  color: green; }
